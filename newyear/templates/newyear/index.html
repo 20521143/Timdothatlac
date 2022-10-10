@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang='en'>
+    <head>
+        <title>is new year?</title>
+        <link href="{%  static 'newyear/styles.css' %}" rel="stylesheet" >
+    </head>
+    <body>
+        {% if newyear %}
+            <h1>yes</h1>
+        {% else %}
+            <h1>no</h1>
+        {% endif %}
+    </body>
+</html>
