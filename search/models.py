@@ -12,10 +12,10 @@ class Item(models.Model):
     adrLost = models.CharField("Địa điểm mất",max_length=200)
     image = models.CharField("Hình ảnh vật", max_length=50) # link file 
     content = models.CharField("Nội dung", max_length=500)
-    fullname = models.CharField("Họ tên", max_length = 100)
-    address = models.CharField("Địa chỉ", max_length = 200)
-    phoneNum = models.CharField("Số điện thoại", max_length = 10)
-    email = models.EmailField(("Email"), max_length=254)
+    fullname = models.CharField("Họ tên",blank = True, max_length = 100)
+    address = models.CharField("Địa chỉ",blank = True, max_length = 200)
+    phoneNum = models.CharField("Số điện thoại",blank =  True, max_length = 10)
+    email = models.EmailField(("Email"),blank = True, max_length=254)
 class Message(models.Model):
     fullname = models.CharField(("Họ tên"), max_length=100)
     content = models.CharField(("Nội dung"), max_length=50)
@@ -24,6 +24,7 @@ class Message(models.Model):
 class menuItem(models.Model):
     nameItem = models.CharField("Tên kiểu đồ",max_length=50)
     amountLost = models.IntegerField(("Số lượng mất"))
-    amountPick = models.IntegerField("Số lượng nhặt được")
+    amountPick = models.IntegerField("Số lượng nhặt được") 
+    #haha
 
 
