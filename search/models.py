@@ -5,6 +5,8 @@ class Account(models.Model):
     password = models.CharField("Mật khẩu", max_length=50)
     fullname = models.CharField("Họ tên", max_length=100)
     email = models.EmailField(("Email"), max_length=254)
+    def __str__(self):
+        print(f"{self.username} {self.email}")
 class Item(models.Model):
     title = models.CharField("Tiêu đề", max_length = 200)
     typeInfo = models.CharField("Loại tin",max_length = 50) # tin : tìm kiếm / thất lạc
@@ -16,6 +18,8 @@ class Item(models.Model):
     address = models.CharField("Địa chỉ", max_length = 200)
     phoneNum = models.CharField("Số điện thoại", max_length = 10)
     email = models.EmailField(("Email"), max_length=254)
+    def __str__(self):
+        print(f"{self.title}")
 class Message(models.Model):
     fullname = models.CharField(("Họ tên"), max_length=100)
     content = models.CharField(("Nội dung"), max_length=50)
